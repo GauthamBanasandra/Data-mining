@@ -1,0 +1,183 @@
+step-1 : printing id
+43
+22
+40
+16
+54
+72
+107
+112
+108
+106
+
+step-2 : summary statistics
+ID                      Sepal.Length            Sepal.Width             Petal.Length            Petal.Width
+min=16                   min=4.4                  min=2.3                  min=1.3                  min=0.2
+max=112                  max=7.6                  max=4.4                  max=6.6                  max=2.1
+mean=68.0                mean=5.81                mean=3.09                mean=3.65                mean=1.13
+median=63.0              median=5.6               median=2.95              median=4.0               median=1.3
+std. dev=35.975          std. dev=0.9894          std. dev=0.5873          std. dev=1.9699          std. dev=0.7184
+
+class setosa :
+ID                      Sepal.Length            Sepal.Width             Petal.Length            Petal.Width
+min=16                   min=4.4                  min=3.2                  min=1.3                  min=0.2
+max=43                   max=5.7                  max=4.4                  max=1.5                  max=0.4
+mean=30.25               mean=5.075               mean=3.675               mean=1.45                mean=0.3
+median=31.0              median=5.1               median=3.55              median=1.5               median=0.3
+std. dev=11.4973         std. dev=0.4603          std. dev=0.4548          std. dev=0.0866          std. dev=0.1
+
+class versicolor :
+ID                      Sepal.Length            Sepal.Width             Petal.Length            Petal.Width
+min=54                   min=5.5                  min=2.3                  min=4                    min=1.3
+max=72                   max=6.1                  max=2.8                  max=4                    max=1.3
+mean=63.0                mean=5.8                 mean=2.55                mean=4.0                 mean=1.3
+median=63.0              median=5.8               median=2.55              median=4.0               median=1.3
+std. dev=9.0             std. dev=0.3             std. dev=0.25            std. dev=0.0             std. dev=0.0
+
+class virginica :
+ID                      Sepal.Length            Sepal.Width             Petal.Length            Petal.Width
+min=106                  min=4.9                  min=2.5                  min=4.5                  min=1.7
+max=112                  max=7.6                  max=3                    max=6.6                  max=2.1
+mean=108.25              mean=6.55                mean=2.775               mean=5.675               mean=1.875
+median=107.5             median=6.85              median=2.8               median=5.8               median=1.85
+std. dev=2.2776          std. dev=1.05            std. dev=0.192           std. dev=0.8318          std. dev=0.1479
+
+                               eucledian                      manhattan                      supremum
+minimum= 0.36, 22(setosa), 40(setosa)             0.5, 22(setosa), 40(setosa)              0.3, 108(virginica), 106(virginica)
+maximum= 6.48, 43(setosa), 106(virginica)         10.6, 43(setosa), 106(virginica)         5.3, 43(setosa), 106(virginica)
+
+step-3 : class prediction using k-nearest neighbour approach
+k : 1
+test_id    actual_class    manhattan                      eucledian                      supremum
+43         setosa          neighbours:setosa              neighbours:setosa              neighbours:setosa
+                           prediction:setosa              prediction:setosa              prediction:setosa
+22         setosa          neighbours:setosa              neighbours:setosa              neighbours:setosa
+                           prediction:setosa              prediction:setosa              prediction:setosa
+40         setosa          neighbours:setosa              neighbours:setosa              neighbours:setosa
+                           prediction:setosa              prediction:setosa              prediction:setosa
+16         setosa          neighbours:setosa              neighbours:setosa              neighbours:setosa
+                           prediction:setosa              prediction:setosa              prediction:setosa
+54         versicolor      neighbours:versicolor          neighbours:versicolor          neighbours:versicolor
+                           prediction:versicolor          prediction:versicolor          prediction:versicolor
+72         versicolor      neighbours:versicolor          neighbours:versicolor          neighbours:versicolor
+                           prediction:versicolor          prediction:versicolor          prediction:versicolor
+107        virginica       neighbours:versicolor          neighbours:versicolor          neighbours:versicolor
+                           prediction:versicolor          prediction:versicolor          prediction:versicolor
+112        virginica       neighbours:virginica           neighbours:virginica           neighbours:versicolor
+                           prediction:virginica           prediction:virginica           prediction:versicolor
+108        virginica       neighbours:virginica           neighbours:virginica           neighbours:virginica
+                           prediction:virginica           prediction:virginica           prediction:virginica
+106        virginica       neighbours:virginica           neighbours:virginica           neighbours:virginica
+                           prediction:virginica           prediction:virginica           prediction:virginica
+accuracy:
+eucledian= 0.9
+manhattan= 0.9
+supremum= 0.8
+
+k : 2
+test_id    actual_class    manhattan                                eucledian                                supremum
+43         setosa          neighbours:setosa, setosa                neighbours:setosa, setosa                neighbours:setosa, setosa
+                           prediction:setosa                        prediction:setosa                        prediction:setosa
+22         setosa          neighbours:setosa, setosa                neighbours:setosa, setosa                neighbours:setosa, setosa
+                           prediction:setosa                        prediction:setosa                        prediction:setosa
+40         setosa          neighbours:setosa, setosa                neighbours:setosa, setosa                neighbours:setosa, setosa
+                           prediction:setosa                        prediction:setosa                        prediction:setosa
+16         setosa          neighbours:setosa, setosa                neighbours:setosa, setosa                neighbours:setosa, setosa
+                           prediction:setosa                        prediction:setosa                        prediction:setosa
+54         versicolor      neighbours:versicolor, versicolor        neighbours:versicolor, versicolor        neighbours:versicolor, versicolor
+                           prediction:versicolor                    prediction:versicolor                    prediction:versicolor
+72         versicolor      neighbours:versicolor, versicolor        neighbours:versicolor, versicolor        neighbours:versicolor, versicolor
+                           prediction:versicolor                    prediction:versicolor                    prediction:versicolor
+107        virginica       neighbours:versicolor, versicolor        neighbours:versicolor, versicolor        neighbours:versicolor, versicolor
+                           prediction:versicolor                    prediction:versicolor                    prediction:versicolor
+112        virginica       neighbours:virginica, virginica          neighbours:virginica, virginica          neighbours:versicolor, virginica
+                           prediction:virginica                     prediction:virginica                     prediction:virginica
+108        virginica       neighbours:virginica, virginica          neighbours:virginica, virginica          neighbours:virginica, virginica
+                           prediction:virginica                     prediction:virginica                     prediction:virginica
+106        virginica       neighbours:virginica, virginica          neighbours:virginica, virginica          neighbours:virginica, virginica
+                           prediction:virginica                     prediction:virginica                     prediction:virginica
+accuracy:
+eucledian= 0.9
+manhattan= 0.9
+supremum= 0.9
+
+k : 3
+test_id    actual_class    manhattan                                          eucledian                                          supremum
+43         setosa          neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa
+                           prediction:setosa                                  prediction:setosa                                  prediction:setosa
+22         setosa          neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa
+                           prediction:setosa                                  prediction:setosa                                  prediction:setosa
+40         setosa          neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa
+                           prediction:setosa                                  prediction:setosa                                  prediction:setosa
+16         setosa          neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa                  neighbours:setosa, setosa, setosa
+                           prediction:setosa                                  prediction:setosa                                  prediction:setosa
+54         versicolor      neighbours:versicolor, versicolor, versicolor      neighbours:versicolor, versicolor, versicolor      neighbours:versicolor, versicolor, versicolor
+                           prediction:versicolor                              prediction:versicolor                              prediction:versicolor
+72         versicolor      neighbours:versicolor, versicolor, versicolor      neighbours:versicolor, versicolor, versicolor      neighbours:versicolor, versicolor, versicolor
+                           prediction:versicolor                              prediction:versicolor                              prediction:versicolor
+107        virginica       neighbours:versicolor, versicolor, versicolor      neighbours:versicolor, versicolor, versicolor      neighbours:versicolor, versicolor, versicolor
+                           prediction:versicolor                              prediction:versicolor                              prediction:versicolor
+112        virginica       neighbours:virginica, virginica, virginica         neighbours:virginica, virginica, virginica         neighbours:versicolor, virginica, virginica
+                           prediction:virginica                               prediction:virginica                               prediction:virginica
+108        virginica       neighbours:virginica, virginica, virginica         neighbours:virginica, virginica, virginica         neighbours:virginica, virginica, virginica
+                           prediction:virginica                               prediction:virginica                               prediction:virginica
+106        virginica       neighbours:virginica, virginica, virginica         neighbours:virginica, virginica, virginica         neighbours:virginica, virginica, virginica
+                           prediction:virginica                               prediction:virginica                               prediction:virginica
+accuracy:
+eucledian= 0.9
+manhattan= 0.9
+supremum= 0.9
+
+k : 4
+test_id    actual_class    manhattan                                                    eucledian                                                    supremum
+43         setosa          neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa
+                           prediction:setosa                                            prediction:setosa                                            prediction:setosa
+22         setosa          neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa
+                           prediction:setosa                                            prediction:setosa                                            prediction:setosa
+40         setosa          neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa
+                           prediction:setosa                                            prediction:setosa                                            prediction:setosa
+16         setosa          neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa                    neighbours:setosa, setosa, setosa, setosa
+                           prediction:setosa                                            prediction:setosa                                            prediction:setosa
+54         versicolor      neighbours:versicolor, versicolor, versicolor, versicolor    neighbours:versicolor, versicolor, versicolor, versicolor    neighbours:versicolor, versicolor, versicolor, versicolor
+                           prediction:versicolor                                        prediction:versicolor                                        prediction:versicolor
+72         versicolor      neighbours:versicolor, versicolor, versicolor, versicolor    neighbours:versicolor, versicolor, versicolor, versicolor    neighbours:versicolor, versicolor, versicolor, versicolor
+                           prediction:versicolor                                        prediction:versicolor                                        prediction:versicolor
+107        virginica       neighbours:versicolor, versicolor, versicolor, versicolor    neighbours:versicolor, versicolor, versicolor, versicolor    neighbours:versicolor, versicolor, versicolor, versicolor
+                           prediction:versicolor                                        prediction:versicolor                                        prediction:versicolor
+112        virginica       neighbours:virginica, virginica, virginica, virginica        neighbours:virginica, virginica, virginica, virginica        neighbours:versicolor, virginica, virginica, virginica
+                           prediction:virginica                                         prediction:virginica                                         prediction:virginica
+108        virginica       neighbours:virginica, virginica, virginica, virginica        neighbours:virginica, virginica, virginica, virginica        neighbours:virginica, virginica, virginica, virginica
+                           prediction:virginica                                         prediction:virginica                                         prediction:virginica
+106        virginica       neighbours:virginica, virginica, virginica, virginica        neighbours:virginica, virginica, virginica, virginica        neighbours:virginica, virginica, virginica, virginica
+                           prediction:virginica                                         prediction:virginica                                         prediction:virginica
+accuracy:
+eucledian= 0.9
+manhattan= 0.9
+supremum= 0.9
+
+k : 5
+test_id    actual_class    manhattan                                                              eucledian                                                              supremum
+43         setosa          neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa
+                           prediction:setosa                                                      prediction:setosa                                                      prediction:setosa
+22         setosa          neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa
+                           prediction:setosa                                                      prediction:setosa                                                      prediction:setosa
+40         setosa          neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa
+                           prediction:setosa                                                      prediction:setosa                                                      prediction:setosa
+16         setosa          neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa                      neighbours:setosa, setosa, setosa, setosa, setosa
+                           prediction:setosa                                                      prediction:setosa                                                      prediction:setosa
+54         versicolor      neighbours:versicolor, versicolor, versicolor, versicolor, versicolor  neighbours:versicolor, versicolor, versicolor, versicolor, versicolor  neighbours:versicolor, versicolor, versicolor, versicolor, versicolor
+                           prediction:versicolor                                                  prediction:versicolor                                                  prediction:versicolor
+72         versicolor      neighbours:versicolor, versicolor, versicolor, versicolor, versicolor  neighbours:versicolor, versicolor, versicolor, versicolor, versicolor  neighbours:versicolor, versicolor, versicolor, versicolor, versicolor
+                           prediction:versicolor                                                  prediction:versicolor                                                  prediction:versicolor
+107        virginica       neighbours:versicolor, versicolor, versicolor, versicolor, versicolor  neighbours:versicolor, versicolor, versicolor, versicolor, versicolor  neighbours:versicolor, versicolor, versicolor, versicolor, versicolor
+                           prediction:versicolor                                                  prediction:versicolor                                                  prediction:versicolor
+112        virginica       neighbours:virginica, virginica, virginica, virginica, virginica       neighbours:virginica, virginica, virginica, virginica, virginica       neighbours:versicolor, virginica, virginica, virginica, virginica
+                           prediction:virginica                                                   prediction:virginica                                                   prediction:virginica
+108        virginica       neighbours:virginica, virginica, virginica, virginica, virginica       neighbours:virginica, virginica, virginica, virginica, virginica       neighbours:virginica, virginica, virginica, virginica, virginica
+                           prediction:virginica                                                   prediction:virginica                                                   prediction:virginica
+106        virginica       neighbours:virginica, virginica, virginica, virginica, virginica       neighbours:virginica, virginica, virginica, virginica, virginica       neighbours:virginica, virginica, virginica, virginica, virginica
+                           prediction:virginica                                                   prediction:virginica                                                   prediction:virginica
+accuracy:
+eucledian= 0.9
+manhattan= 0.9
+supremum= 0.9
