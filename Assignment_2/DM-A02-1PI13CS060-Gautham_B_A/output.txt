@@ -1,0 +1,12 @@
+age:							income:
+min :18.00						min :5014.21
+max :67.00						max :63130.10
+mean :42.40						mean :27524.03
+stddev. :14.42					stddev. :12899.47
+
+covariance : 139829.44
+correlation: 0.75
+
+cutpoint 0 : 19543.18	frequency : 192
+cutpoint 1 : 34072.15	frequency : 240
+cutpoint 2 : 48601.13	frequency : 112

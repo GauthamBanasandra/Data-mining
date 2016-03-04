@@ -1,0 +1,35 @@
+2-D cuboid : avg_income
+age v/s sex
+             FEMALE      MALE
+YOUNG       16759.84  16348.70
+MIDDLE      26151.82  27698.19
+OLD         38560.09  40363.19
+
+age v/s region
+           INNER_CITY   TOWN     RURAL   SUBURBAN
+YOUNG       16236.76  17524.21  16089.50  16227.50
+MIDDLE      26344.23  26278.13  29472.24  28021.71
+OLD         38462.30  37704.61  42442.90  41783.32
+
+sex v/s region
+           INNER_CITY   TOWN     RURAL    SUBURBAN
+FEMALE      27166.22  26730.69  31366.27  28573.27
+MALE        26538.13  26849.57  28743.58  28734.25
+
+2-D cuboid : count
+age v/s sex
+               FEMALE      MALE
+YOUNG             93       102
+MIDDLE            96       118
+OLD              111        80
+
+age v/s region
+           INNER_CITY      TOWN     RURAL   SUBURBAN
+YOUNG             97        50        28        20
+MIDDLE            80        77        35        22
+OLD               92        46        33        20
+
+sex v/s region
+           INNER_CITY      TOWN     RURAL    SUBURBAN
+FEMALE           131        92        47        30
+MALE             138        81        49        32

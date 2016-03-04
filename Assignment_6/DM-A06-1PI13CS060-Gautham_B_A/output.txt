@@ -1,0 +1,105 @@
+J48 pruned tree
+------------------
+
+children = 0
+|   married = NO
+|   |   mortgage = NO: YES (48.0/3.0)
+|   |   mortgage = YES
+|   |   |   save_act = NO: YES (12.0)
+|   |   |   save_act = YES: NO (22.0)
+|   married = YES
+|   |   save_act = NO
+|   |   |   mortgage = NO
+|   |   |   |   income <= 21506.2
+|   |   |   |   |   age <= 41: NO (11.0/1.0)
+|   |   |   |   |   age > 41: YES (5.0/1.0)
+|   |   |   |   income > 21506.2: NO (20.0)
+|   |   |   mortgage = YES: YES (25.0/3.0)
+|   |   save_act = YES: NO (117.0/12.0)
+children = 1
+|   income <= 15538.8
+|   |   age <= 41: NO (22.0/2.0)
+|   |   age > 41: YES (2.0)
+|   income > 15538.8: YES (109.0/5.0)
+children = 2
+|   income <= 30189.4: NO (79.0/9.0)
+|   income > 30189.4: YES (50.0/5.0)
+children = 3
+|   income <= 44288.3: NO (59.0/5.0)
+|   income > 44288.3: YES (8.0)
+
+Number of Leaves  : 	15
+
+Size of the tree : 	27
+
+Best-First Decision Tree
+
+children=(3)|(0)|(2)
+|  married=(YES)
+|  |  income < 45266.15
+|  |  |  save_act=(YES): NO(147.0/26.0)
+|  |  |  save_act!=(YES)
+|  |  |  |  mortgage=(NO): NO(46.0/13.0)
+|  |  |  |  mortgage!=(NO)
+|  |  |  |  |  children=(2)|(3): NO(10.0/0.0)
+|  |  |  |  |  children!=(2)|(3)
+|  |  |  |  |  |  region=(TOWN): NO(2.0/1.0)
+|  |  |  |  |  |  region!=(TOWN): YES(21.0/1.0)
+|  |  income >= 45266.15
+|  |  |  children=(0)|(1): NO(17.0/2.0)
+|  |  |  children!=(0)|(1): YES(17.0/0.0)
+|  married!=(YES)
+|  |  mortgage=(YES)
+|  |  |  save_act=(YES)
+|  |  |  |  children=(0)|(3)|(1): NO(24.0/0.0)
+|  |  |  |  children!=(0)|(3)|(1)
+|  |  |  |  |  income < 30499.7
+|  |  |  |  |  |  income < 13423.3: YES(1.0/1.0)
+|  |  |  |  |  |  income >= 13423.3: NO(6.0/0.0)
+|  |  |  |  |  income >= 30499.7
+|  |  |  |  |  |  age < 60.5: YES(3.0/0.0)
+|  |  |  |  |  |  age >= 60.5: YES(1.0/1.0)
+|  |  |  save_act!=(YES)
+|  |  |  |  children=(2)|(3): NO(6.0/0.0)
+|  |  |  |  children!=(2)|(3): YES(12.0/0.0)
+|  |  mortgage!=(YES)
+|  |  |  children=(3)|(2)|(1)
+|  |  |  |  income < 30340.85
+|  |  |  |  |  region=(INNER_CITY)|(RURAL)|(TOWN)
+|  |  |  |  |  |  age < 49.5: NO(21.0/0.0)
+|  |  |  |  |  |  age >= 49.5: YES(1.0/1.0)
+|  |  |  |  |  region!=(INNER_CITY)|(RURAL)|(TOWN)
+|  |  |  |  |  |  age < 41.5: YES(2.0/0.0)
+|  |  |  |  |  |  age >= 41.5: NO(3.0/0.0)
+|  |  |  |  income >= 30340.85
+|  |  |  |  |  children=(3)
+|  |  |  |  |  |  income < 43235.05: NO(4.0/0.0)
+|  |  |  |  |  |  income >= 43235.05: YES(3.0/0.0)
+|  |  |  |  |  children!=(3): YES(15.0/0.0)
+|  |  |  children!=(3)|(2)|(1): YES(45.0/3.0)
+children!=(3)|(0)|(2)
+|  income < 15576.45
+|  |  age < 41.5
+|  |  |  income < 12694.1: NO(14.0/0.0)
+|  |  |  income >= 12694.1
+|  |  |  |  income < 13437.85: YES(2.0/0.0)
+|  |  |  |  income >= 13437.85: NO(6.0/0.0)
+|  |  age >= 41.5: YES(2.0/0.0)
+|  income >= 15576.45: YES(104.0/5.0)
+
+Size of the Tree: 53
+
+Number of Leaf Nodes: 27
+
+Class		C4.5 prediction			Gini prediction
+NO			NO				NO
+NO			NO				NO
+NO			NO				NO
+NO			NO				NO
+NO			NO				NO
+NO			NO				NO
+YES			YES				YES
+YES			YES				YES
+NO			NO				NO
+YES			YES				YES
+NO			NO				NO

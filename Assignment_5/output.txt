@@ -1,0 +1,47 @@
+Premise: vegetables, biscuits
+Consequence: fruit
+TotalSupport: 1404.0
+Lift: 1.24
+Confidence: 0.60
+
+Premise: vegetables, frozen foods
+Consequence: fruit
+TotalSupport: 1451.0
+Lift: 1.20
+Confidence: 0.64
+
+Premise: vegetables, milk-cream
+Consequence: fruit
+TotalSupport: 1571.0
+Lift: 1.21
+Confidence: 0.68
+
+Premise: bread and cake, vegetables
+Consequence: fruit
+TotalSupport: 1791.0
+Lift: 1.22
+Confidence: 0.78
+
+Premise: vegetables
+Consequence: bread and cake, fruit
+TotalSupport: 1791.0
+Lift: 1.20
+Confidence: 1.27
+
+Premise: vegetables
+Consequence: fruit, milk-cream
+TotalSupport: 1571.0
+Lift: 1.20
+Confidence: 1.45
+
+Premise: vegetables
+Consequence: fruit, baking needs
+TotalSupport: 1489.0
+Lift: 1.22
+Confidence: 1.56
+
+Premise: vegetables
+Consequence: fruit, frozen foods
+TotalSupport: 1451.0
+Lift: 1.22
+Confidence: 1.59

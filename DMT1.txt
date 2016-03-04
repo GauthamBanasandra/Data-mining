@@ -1,0 +1,10 @@
+Syllabus for T1
+
+Chapter 1 - All sections
+Chapter 2 - All sections except 2.2.2, 2.2.3, 2.3
+Chapter 3 - All sections except 3.3.3, 3.3.4, 3.4, 3.5.4, 3.5.5
+Chapter 4 - All sections except 4.3, 4.4.4, 4.5
+Chapter 5 - Section 5.1.1 only
+Chapter 6 - All sections except 6.2.3, 6.2.6
+Chapter 7 - All sections except 7.2.3, 7.4, 7.5, 7.6
+Chapter 8 - Sections 8.1, 8.2
