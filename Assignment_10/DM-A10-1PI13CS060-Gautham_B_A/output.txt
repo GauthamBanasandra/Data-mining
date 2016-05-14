@@ -1,0 +1,7 @@
+Number of pixels=10368
+Number of clusters=4
+Cluster no.		size			avg colour(RGB)
+0			3209			255, 255, 255
+1			6148			23, 47, 95
+2			580			201, 216, 51
+3			431			184, 124, 43

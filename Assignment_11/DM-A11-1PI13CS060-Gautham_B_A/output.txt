@@ -1,0 +1,33 @@
+clusters:
+cluster_id     core node cluster members
+1              0         set([0, 4, 5])
+2              1         set([1, 2, 5])
+3              3         set([2, 3, 4, 5])
+4              7         set([11, 12, 7])
+5              10        set([8, 9, 10, 11, 12])
+hubs: set([12, 2, 11, 4, 5])
+outliers: set([13, 6])
+----------------------------------------------------------------------------------------------------
+detailed information:
+note-
+label-label(id) of the node
+isCore-is the node a core node
+cluster-clusters to which this node belongs to
+epsilon neighbours-neighbouring nodes having minimum epsilon value {neighbouring node:epsilon value}
+neighbours-neighbouring nodes of the current node
+
+label  isCore    cluster        epsilon neighbours                                neighbours               
+0      True      set([1])       {4: 0.8, 5: 0.73}                                 set([0, 1, 4, 5, 6])     
+1      True      set([2])       {2: 0.75, 5: 0.82}                                set([0, 1, 2, 5])        
+2      False     set([2, 3])    {1: 0.75, 5: 0.82}                                set([1, 2, 3, 5])        
+3      True      set([3])       {4: 0.8, 5: 0.73}                                 set([2, 3, 4, 5, 6])     
+4      False     set([1, 3])    {0: 0.8, 3: 0.8, 5: 0.73}                         set([0, 3, 4, 5, 6])     
+5      False     set([1, 2, 3]) {0: 0.73, 1: 0.82, 2: 0.82, 3: 0.73, 4: 0.73}     set([0, 1, 2, 3, 4, 5])  
+6      False     set([])        {}                                                set([0, 3, 4, 6, 7, 10, 11])
+7      True      set([4])       {11: 0.8, 12: 0.73}                               set([8, 11, 12, 6, 7])   
+8      False     set([5])       {12: 0.82}                                        set([8, 9, 12, 7])       
+9      False     set([5])       {12: 0.73}                                        set([8, 9, 10, 12, 13])  
+10     True      set([5])       {11: 0.8, 12: 0.73}                               set([9, 10, 11, 12, 6])  
+11     False     set([4, 5])    {10: 0.8, 12: 0.73, 7: 0.8}                       set([10, 11, 12, 6, 7])  
+12     False     set([4, 5])    {8: 0.82, 9: 0.73, 10: 0.73, 11: 0.73, 7: 0.73}   set([7, 8, 9, 10, 11, 12])
+13     False     set([])        {}                                                set([9, 13])             
