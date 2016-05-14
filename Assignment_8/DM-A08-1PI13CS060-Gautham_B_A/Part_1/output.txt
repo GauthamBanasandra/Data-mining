@@ -1,0 +1,47 @@
+initial values of graph elements:
+Nodes:
+name: 1	type: input	input_val: 1
+name: 2	type: input	input_val: 0.25
+name: 3	type: input	input_val: -0.5
+name: 4	type: hidden	bias: 0.6449198196560677	error: 0	output: 0
+name: 5	type: hidden	bias: -0.6956866594171502	error: 0	output: 0
+name: 6	type: output	bias: -0.9495225816384341	error: 0	output: 0	target: 1
+name: 7	type: output	bias: 0.5760429143035526	error: 0	output: 0	target: -1
+
+Links:
+name: l15	weight: 0.12683792784898906	vertices:(1, 5)
+name: l47	weight: -0.5109392187661266	vertices:(4, 7)
+name: l46	weight: 0.4530435420601282	vertices:(4, 6)
+name: l56	weight: 0.48225891953910893	vertices:(5, 6)
+name: l25	weight: 0.006945963317882775	vertices:(2, 5)
+name: l57	weight: 0.6777139058970139	vertices:(5, 7)
+name: l34	weight: 0.644038154827764	vertices:(3, 4)
+name: l24	weight: -0.46516347379707934	vertices:(2, 4)
+name: l14	weight: 0.9512584418923	vertices:(1, 4)
+name: l35	weight: -0.46105607768278634	vertices:(3, 5)
+
+number of iterations: 1000
+
+termination criterion: 1000 iterations
+
+final values and outputs of graph elements:
+Nodes:
+name: 1	type: input	input_val: 1
+name: 2	type: input	input_val: 0.25
+name: 3	type: input	input_val: -0.5
+name: 4	type: hidden	bias: 1.6007866372052344	error: 2.148426250211584e-05	output: 0.9820007963733275
+name: 5	type: hidden	bias: 2.4043200812041516	error: 3.956100100208774e-07	output: 0.996365599562278
+name: 6	type: output	bias: 4.764154730544503	error: 7.310225353734372e-19	output: 0.9999999993954247	target: 1
+name: 7	type: output	bias: -2.360192888698117	error: -0.00018654841444024965	output: -0.9999810243465947	target: -1
+
+Links:
+name: l15	weight: 3.226844668470291	vertices:(1, 5)
+name: l47	weight: -3.189781271956333	vertices:(4, 7)
+name: l46	weight: 5.505354723354339	vertices:(4, 6)
+name: l56	weight: 0.7922830305769935	vertices:(5, 6)
+name: l25	weight: 0.7819476484732083	vertices:(2, 5)
+name: l57	weight: -0.2917418883250012	vertices:(5, 7)
+name: l34	weight: 0.16610474605318004	vertices:(3, 4)
+name: l24	weight: -0.22619676940978747	vertices:(2, 4)
+name: l14	weight: 1.9071252594414667	vertices:(1, 4)
+name: l35	weight: -2.0110594479934405	vertices:(3, 5)
